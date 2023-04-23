@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dragonfly_energy.des.ghe &#8212; dragonfly-energy  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          dragonfly-energy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate">dragonfly-energy translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-gbxml">model-to-gbxml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-idf">model-to-idf</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-osm">model-to-osm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/simulate.html">simulate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate">dragonfly-energy simulate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../dragonfly_energy.html">dragonfly_energy package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.cli.html">dragonfly_energy.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.simulate.html">dragonfly_energy.cli.simulate module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.translate.html">dragonfly_energy.cli.translate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#module-dragonfly_energy.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.des.html">dragonfly_energy.des package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.loop.html">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html">dragonfly_energy.opendss.lib package</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.powerlines.html">dragonfly_energy.opendss.lib.powerlines module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.transformers.html">dragonfly_energy.opendss.lib.transformers module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.wires.html">dragonfly_energy.opendss.lib.wires module</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#module-dragonfly_energy.opendss.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.wire.html">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.properties.html">dragonfly_energy.properties package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.building.html">dragonfly_energy.properties.building module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.context.html">dragonfly_energy.properties.context module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.model.html">dragonfly_energy.properties.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.room2d.html">dragonfly_energy.properties.room2d module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.story.html">dragonfly_energy.properties.story module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#module-dragonfly_energy.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.measure.html">dragonfly_energy.measure module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <h1>Source code for dragonfly_energy.des.ghe</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="sd">&quot;&quot;&quot;Ground Heat Exchanger (GHE) in a district thermal system.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">.._base</span> <span class="kn">import</span> <span class="n">_GeometryBase</span>
+
+<span class="kn">from</span> <span class="nn">ladybug_geometry.geometry2d.polygon</span> <span class="kn">import</span> <span class="n">Polygon2D</span>
+<span class="kn">from</span> <span class="nn">honeybee.typing</span> <span class="kn">import</span> <span class="n">float_positive</span><span class="p">,</span> <span class="n">float_in_range</span>
+<span class="kn">from</span> <span class="nn">honeybee.altnumber</span> <span class="kn">import</span> <span class="n">autocalculate</span>
+<span class="kn">from</span> <span class="nn">dragonfly.projection</span> <span class="kn">import</span> <span class="n">polygon_to_lon_lat</span>
+
+
+<div class="viewcode-block" id="GroundHeatExchanger"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.GroundHeatExchanger">[docs]</a><span class="k">class</span> <span class="nc">GroundHeatExchanger</span><span class="p">(</span><span class="n">_GeometryBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a Ground Heat Exchanger in a district thermal system.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        identifier: Text string for a unique heat exchanger ID. Must contain only</span>
+<span class="sd">            characters that are acceptable in OpenDSS. This will be used to</span>
+<span class="sd">            identify the object across the exported geoJSON and OpenDSS files.</span>
+<span class="sd">        geometry: A Polygon2D representing the geometry of the heat exchanger.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * identifier</span>
+<span class="sd">        * display_name</span>
+<span class="sd">        * geometry</span>
+<span class="sd">        * soil_parameters</span>
+<span class="sd">        * pipe_parameters</span>
+<span class="sd">        * borehole_parameters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_soil_parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;_pipe_parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;_borehole_parameters&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">geometry</span><span class="p">,</span> <span class="n">soil_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">pipe_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">borehole_parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize GroundHeatExchanger.&quot;&quot;&quot;</span>
+        <span class="n">_GeometryBase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">)</span>  <span class="c1"># process the identifier</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">geometry</span><span class="p">,</span> <span class="n">Polygon2D</span><span class="p">),</span> <span class="s1">&#39;Expected ladybug_geometry &#39;</span> \
+            <span class="s1">&#39;Polygon2D for GroundHeatExchanger geometry. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">geometry</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span> <span class="o">=</span> <span class="n">geometry</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">soil_parameters</span> <span class="o">=</span> <span class="n">soil_parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span> <span class="o">=</span> <span class="n">pipe_parameters</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">borehole_parameters</span> <span class="o">=</span> <span class="n">borehole_parameters</span>
+
+<div class="viewcode-block" id="GroundHeatExchanger.from_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.GroundHeatExchanger.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize a GroundHeatExchanger from a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of an GroundHeatExchanger object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># check the type of dictionary</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;GroundHeatExchanger&#39;</span><span class="p">,</span> <span class="s1">&#39;Expected GroundHeatExchanger &#39;</span> \
+            <span class="s1">&#39;dictionary. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+        <span class="n">geo</span> <span class="o">=</span> <span class="n">Polygon2D</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
+        <span class="n">soil</span> <span class="o">=</span> <span class="n">SoilParameter</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;soil_parameters&#39;</span><span class="p">])</span> \
+            <span class="k">if</span> <span class="s1">&#39;soil_parameters&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">pipe</span> <span class="o">=</span> <span class="n">PipeParameter</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;pipe_parameters&#39;</span><span class="p">])</span> \
+            <span class="k">if</span> <span class="s1">&#39;pipe_parameters&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">bore</span> <span class="o">=</span> <span class="n">BoreholeParameter</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;borehole_parameters&#39;</span><span class="p">])</span> \
+            <span class="k">if</span> <span class="s1">&#39;borehole_parameters&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">trans</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;identifier&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="p">,</span> <span class="n">soil</span><span class="p">,</span> <span class="n">pipe</span><span class="p">,</span> <span class="n">bore</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;display_name&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">trans</span><span class="o">.</span><span class="n">display_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">trans</span></div>
+
+<div class="viewcode-block" id="GroundHeatExchanger.from_geojson_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.GroundHeatExchanger.from_geojson_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_geojson_dict</span><span class="p">(</span>
+            <span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a GroundHeatExchanger from a dictionary as it appears in a GeoJSON.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A GeoJSON dictionary representation of an GroundHeatExchanger feature.</span>
+<span class="sd">            origin_lon_lat: An array of two numbers in degrees. The first value</span>
+<span class="sd">                represents the longitude of the scene origin in degrees (between -180</span>
+<span class="sd">                and +180). The second value represents latitude of the scene origin</span>
+<span class="sd">                in degrees (between -90 and +90). Note that the &quot;scene origin&quot; is the</span>
+<span class="sd">                (0, 0) coordinate in the 2D space of the input polygon.</span>
+<span class="sd">            conversion_factors: A tuple with two values used to translate between</span>
+<span class="sd">                meters and longitude, latitude.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">geo</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_geojson_coordinates_to_polygon2d</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">],</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a Polygon2D representing the ground heat exchanger.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">soil_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a SoilParameters object for the heat exchanger field.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_soil_parameters</span>
+
+    <span class="nd">@soil_parameters</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">soil_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">SoilParameter</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">SoilParameter</span><span class="p">),</span> \
+            <span class="s1">&#39;Expected SoilParameter object&#39;</span> \
+            <span class="s1">&#39; for GroundHeatExchanger. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_soil_parameters</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">pipe_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a PipeParameter object for the heat exchanger field.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_pipe_parameters</span>
+
+    <span class="nd">@pipe_parameters</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">pipe_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">PipeParameter</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">PipeParameter</span><span class="p">),</span> \
+            <span class="s1">&#39;Expected PipeParameter object&#39;</span> \
+            <span class="s1">&#39; for GroundHeatExchanger. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_pipe_parameters</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">borehole_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a BoreholeParameter object for the heat exchanger field.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_borehole_parameters</span>
+
+    <span class="nd">@borehole_parameters</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">borehole_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">BoreholeParameter</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">BoreholeParameter</span><span class="p">),</span> \
+            <span class="s1">&#39;Expected BoreholeParameter object&#39;</span> \
+            <span class="s1">&#39; for GroundHeatExchanger. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_borehole_parameters</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="GroundHeatExchanger.to_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.GroundHeatExchanger.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;GroundHeatExchanger dictionary representation.&quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;GroundHeatExchanger&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;identifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;soil_parameters&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soil_parameters</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;pipe_parameters&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;borehole_parameters&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">borehole_parameters</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_name</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="GroundHeatExchanger.to_geojson_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.GroundHeatExchanger.to_geojson_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_geojson_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get GroundHeatExchanger dictionary as it appears in an URBANopt geoJSON.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            origin_lon_lat: An array of two numbers in degrees. The first value</span>
+<span class="sd">                represents the longitude of the scene origin in degrees (between -180</span>
+<span class="sd">                and +180). The second value represents latitude of the scene origin</span>
+<span class="sd">                in degrees (between -90 and +90). Note that the &quot;scene origin&quot; is the</span>
+<span class="sd">                (0, 0) coordinate in the 2D space of the input polygon.</span>
+<span class="sd">            conversion_factors: A tuple with two values used to translate between</span>
+<span class="sd">                meters and longitude, latitude.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">pts</span> <span class="o">=</span> <span class="p">[(</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="p">]</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="p">[</span><span class="n">polygon_to_lon_lat</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">)]</span>
+        <span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coords</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Feature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+                <span class="s1">&#39;geometryType&#39;</span><span class="p">:</span> <span class="s1">&#39;Rectangle&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;District System&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;footprint_area&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">area</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="s1">&#39;footprint_perimeter&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">perimeter</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="s1">&#39;floor_area&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">area</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+                <span class="s1">&#39;district_system_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Ground Heat Exchanger&#39;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Polygon&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;coordinates&#39;</span><span class="p">:</span> <span class="n">coords</span>
+            <span class="p">}</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="GroundHeatExchanger.to_des_param_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.GroundHeatExchanger.to_des_param_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_des_param_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the GroundHeatExchanger as it appears in a System Parameter dictionary.&quot;&quot;&quot;</span>
+        <span class="n">u_temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">soil_parameters</span><span class="o">.</span><span class="n">undisturbed_temperature</span> \
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">soil_parameters</span><span class="o">.</span><span class="n">_undisturbed_temperature</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> \
+            <span class="k">else</span> <span class="s1">&#39;Autocalculate&#39;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;ghe_parameters&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;connectors&#39;</span><span class="p">:</span> <span class="p">{</span>  <span class="c1"># not currently used</span>
+                    <span class="s1">&#39;pipe_diameter&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+                    <span class="s1">&#39;pipe_insulation_rvalue&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                    <span class="s1">&#39;pipe_location&#39;</span><span class="p">:</span> <span class="s1">&#39;Tunnel&#39;</span>
+                <span class="p">},</span>
+                <span class="s1">&#39;soil&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;conductivity&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">soil_parameters</span><span class="o">.</span><span class="n">conductivity</span><span class="p">,</span>
+                    <span class="s1">&#39;rho_cp&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">soil_parameters</span><span class="o">.</span><span class="n">heat_capacity</span><span class="p">,</span>
+                    <span class="s1">&#39;undisturbed_temp&#39;</span><span class="p">:</span> <span class="n">u_temp</span>
+                <span class="p">},</span>
+                <span class="s1">&#39;pipe&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;inner_diameter&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">inner_diameter</span><span class="p">,</span>
+                    <span class="s1">&#39;outer_diameter&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">outer_diameter</span><span class="p">,</span>
+                    <span class="s1">&#39;shank_spacing&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">shank_spacing</span><span class="p">,</span>
+                    <span class="s1">&#39;roughness&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">roughness</span><span class="p">,</span>
+                    <span class="s1">&#39;conductivity&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">conductivity</span><span class="p">,</span>
+                    <span class="s1">&#39;rho_cp&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">heat_capacity</span>
+                <span class="p">},</span>
+                <span class="s1">&#39;borehole&#39;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s1">&#39;length&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">borehole_parameters</span><span class="o">.</span><span class="n">length</span><span class="p">,</span>
+                    <span class="s1">&#39;buried_depth&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">borehole_parameters</span><span class="o">.</span><span class="n">buried_depth</span><span class="p">,</span>
+                    <span class="s1">&#39;diameter&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">borehole_parameters</span><span class="o">.</span><span class="n">diameter</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">new_ghe</span> <span class="o">=</span> <span class="n">GroundHeatExchanger</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">soil_parameters</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(),</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pipe_parameters</span><span class="o">.</span><span class="n">duplicate</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">borehole_parameters</span><span class="o">.</span><span class="n">duplicate</span><span class="p">())</span>
+        <span class="n">new_ghe</span><span class="o">.</span><span class="n">_display_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span>
+        <span class="k">return</span> <span class="n">new_ghe</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;GroundHeatExchanger: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="SoilParameter"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.SoilParameter">[docs]</a><span class="k">class</span> <span class="nc">SoilParameter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents the soil properties within a ground heat exchanger field.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        conductivity: A number for the soil conductivity in W/m-K. (Default: 2.3).</span>
+<span class="sd">        heat_capacity: A number for the volumetric heat capacity of the soil</span>
+<span class="sd">            in J/m3-K. (Default: 2,343,500).</span>
+<span class="sd">        undisturbed_temperature: A number the undisturbed annual average soil</span>
+<span class="sd">            temperature in degrees Celsius. If autocalculate, this value will</span>
+<span class="sd">            automatically be replaced with the average EPW temperature before</span>
+<span class="sd">            simulation. (Default: Autocalculate).</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * conductivity</span>
+<span class="sd">        * heat_capacity</span>
+<span class="sd">        * undisturbed_temperature</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_conductivity&#39;</span><span class="p">,</span> <span class="s1">&#39;_heat_capacity&#39;</span><span class="p">,</span> <span class="s1">&#39;_undisturbed_temperature&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">conductivity</span><span class="o">=</span><span class="mf">2.3</span><span class="p">,</span> <span class="n">heat_capacity</span><span class="o">=</span><span class="mi">2343500</span><span class="p">,</span>
+                 <span class="n">undisturbed_temperature</span><span class="o">=</span><span class="n">autocalculate</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize SoilParameter.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span> <span class="o">=</span> <span class="n">conductivity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heat_capacity</span> <span class="o">=</span> <span class="n">heat_capacity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">undisturbed_temperature</span> <span class="o">=</span> <span class="n">undisturbed_temperature</span>
+
+<div class="viewcode-block" id="SoilParameter.from_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.SoilParameter.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a SoilParameter object from a dictionary</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of an SoilParameter object</span>
+<span class="sd">                in the format below.</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &#39;type&#39;: &#39;SoilParameter&#39;,</span>
+<span class="sd">            &#39;conductivity&#39;: 1.8,  # float in W/m2-K</span>
+<span class="sd">            &#39;heat_capacity&#39;: 2100000,  # float in J/m3-K</span>
+<span class="sd">            &#39;undisturbed_temperature&#39;: 18  # float in C or autocalculate</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cond</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;conductivity&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;conductivity&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">2.3</span>
+        <span class="n">cap</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;heat_capacity&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;heat_capacity&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">2343500</span>
+        <span class="n">u_temp</span> <span class="o">=</span> <span class="n">autocalculate</span> <span class="k">if</span> <span class="s1">&#39;undisturbed_temperature&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">or</span> \
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;undisturbed_temperature&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">autocalculate</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> \
+            <span class="k">else</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;undisturbed_temperature&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="n">cap</span><span class="p">,</span> <span class="n">u_temp</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">conductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the soil conductivity in W/m-K.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span>
+
+    <span class="nd">@conductivity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">conductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;soil conductivity&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">heat_capacity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the volumetric heat capacity of the soil in J/m3-K.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_heat_capacity</span>
+
+    <span class="nd">@heat_capacity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">heat_capacity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_heat_capacity</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;soil heat_capacity&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">undisturbed_temperature</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set an integer (or Autocalculate) for the vegetation end month.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_undisturbed_temperature</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_undisturbed_temperature</span> \
+            <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">autocalculate</span>
+
+    <span class="nd">@undisturbed_temperature</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">undisturbed_temperature</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="n">autocalculate</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_undisturbed_temperature</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_undisturbed_temperature</span> <span class="o">=</span> \
+                <span class="n">float_in_range</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="o">-</span><span class="mi">273</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="s1">&#39;undisturbed_temperature&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SoilParameter.to_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.SoilParameter.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get SoilParameter dictionary.&quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;SoilParameter&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;conductivity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;heat_capacity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heat_capacity</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_undisturbed_temperature</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;undisturbed_temperature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_undisturbed_temperature</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="SoilParameter.duplicate"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.SoilParameter.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a copy of this object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">new_obj</span> <span class="o">=</span> <span class="n">SoilParameter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_heat_capacity</span><span class="p">)</span>
+        <span class="n">new_obj</span><span class="o">.</span><span class="n">_undisturbed_temperature</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_undisturbed_temperature</span>
+        <span class="k">return</span> <span class="n">new_obj</span>
+
+<div class="viewcode-block" id="SoilParameter.ToString"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.SoilParameter.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overwrite .NET ToString method.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent SoilParameter.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;SoilParameter: [conductivity: </span><span class="si">{}</span><span class="s1"> W/m2-K] &#39;</span> \
+            <span class="s1">&#39;[heat capacity: </span><span class="si">{}</span><span class="s1"> J/m3-K]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_heat_capacity</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="PipeParameter"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.PipeParameter">[docs]</a><span class="k">class</span> <span class="nc">PipeParameter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents the pipe properties within a ground heat exchanger field.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        inner_diameter: A number for the diameter of the inner pipe surface in</span>
+<span class="sd">            meters. (Default: 0.0216).</span>
+<span class="sd">        outer_diameter: A number for the diameter of the outer pipe surface in</span>
+<span class="sd">            meters. (Default: 0.0266).</span>
+<span class="sd">        shank_spacing: A number for the spacing between the U-tube legs, as</span>
+<span class="sd">            referenced from outer surface of the pipes in meters. (NOT referenced</span>
+<span class="sd">            from each pipe&#39;s respective centerline). (Default: 0.0323).</span>
+<span class="sd">        roughness: A number for the linear dimension of bumps on the pipe surface</span>
+<span class="sd">            in meters. (Default: 1e-06)</span>
+<span class="sd">        conductivity: A number for the conductivity of the pipe material in</span>
+<span class="sd">            W/m-K. (Default: 0.4).</span>
+<span class="sd">        heat_capacity: A number for the volumetric heat capacity of the pipe</span>
+<span class="sd">            material in J/m3-K. (Default: 1,542,000).</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * inner_diameter</span>
+<span class="sd">        * outer_diameter</span>
+<span class="sd">        * shank_spacing</span>
+<span class="sd">        * roughness</span>
+<span class="sd">        * conductivity</span>
+<span class="sd">        * heat_capacity</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_inner_diameter&#39;</span><span class="p">,</span> <span class="s1">&#39;_outer_diameter&#39;</span><span class="p">,</span> <span class="s1">&#39;_shank_spacing&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;_roughness&#39;</span><span class="p">,</span> <span class="s1">&#39;_conductivity&#39;</span><span class="p">,</span> <span class="s1">&#39;_heat_capacity&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">inner_diameter</span><span class="o">=</span><span class="mf">0.0216</span><span class="p">,</span> <span class="n">outer_diameter</span><span class="o">=</span><span class="mf">0.0266</span><span class="p">,</span> <span class="n">shank_spacing</span><span class="o">=</span><span class="mf">0.0323</span><span class="p">,</span>
+            <span class="n">roughness</span><span class="o">=</span><span class="mf">1e-06</span><span class="p">,</span> <span class="n">conductivity</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">heat_capacity</span><span class="o">=</span><span class="mi">1542000</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize PipeParameter.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">inner_diameter</span> <span class="o">=</span> <span class="n">inner_diameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">outer_diameter</span> <span class="o">=</span> <span class="n">outer_diameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shank_spacing</span> <span class="o">=</span> <span class="n">shank_spacing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">roughness</span> <span class="o">=</span> <span class="n">roughness</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span> <span class="o">=</span> <span class="n">conductivity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">heat_capacity</span> <span class="o">=</span> <span class="n">heat_capacity</span>
+
+<div class="viewcode-block" id="PipeParameter.from_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.PipeParameter.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a PipeParameter object from a dictionary</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of an PipeParameter object</span>
+<span class="sd">                in the format below.</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &#39;type&#39;: &#39;PipeParameter&#39;,</span>
+<span class="sd">            &#39;inner_diameter&#39;: 0.0216,  # float for inner diameter in meters</span>
+<span class="sd">            &#39;outer_diameter&#39;: 0.0266  # float for outer diameter in meters</span>
+<span class="sd">            &#39;shank_spacing&#39;: 0.0323,  # float for spacing between outer pipes in meters</span>
+<span class="sd">            &#39;roughness&#39;: 1e-06,  # float for the dimension of the surface bumps</span>
+<span class="sd">            &#39;conductivity&#39;: 0.6,  # float in W/m2-K</span>
+<span class="sd">            &#39;heat_capacity&#39;: 1542000  # float in J/m3-K</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">in_d</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;inner_diameter&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;inner_diameter&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">0.0216</span>
+        <span class="n">out_d</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;outer_diameter&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;outer_diameter&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">0.0266</span>
+        <span class="n">s_spc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;shank_spacing&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;shank_spacing&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">0.0323</span>
+        <span class="n">rough</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;roughness&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;roughness&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">1e-06</span>
+        <span class="n">cond</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;conductivity&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;conductivity&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">2.3</span>
+        <span class="n">cap</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;heat_capacity&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;heat_capacity&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">2343500</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">in_d</span><span class="p">,</span> <span class="n">out_d</span><span class="p">,</span> <span class="n">s_spc</span><span class="p">,</span> <span class="n">rough</span><span class="p">,</span> <span class="n">cond</span><span class="p">,</span> <span class="n">cap</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">inner_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the inner diameter of the pipe in meters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inner_diameter</span>
+
+    <span class="nd">@inner_diameter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">inner_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_inner_diameter</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;pipe inner diameter&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">outer_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the outer diameter of the pipe in meters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outer_diameter</span>
+
+    <span class="nd">@outer_diameter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">outer_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_outer_diameter</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;pipe outer diameter&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">shank_spacing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the shank spacing between the pipes in meters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_shank_spacing</span>
+
+    <span class="nd">@shank_spacing</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">shank_spacing</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_shank_spacing</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;pipe shank spacing&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">roughness</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the dimension of the pipe surface bumps in meters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_roughness</span>
+
+    <span class="nd">@roughness</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">roughness</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_roughness</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;pipe roughness&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">conductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the conductivity of the pipe material in W/m-K.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span>
+
+    <span class="nd">@conductivity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">conductivity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_conductivity</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;pipe conductivity&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">heat_capacity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the volumetric heat capacity of the pipe in J/m3-K.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_heat_capacity</span>
+
+    <span class="nd">@heat_capacity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">heat_capacity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_heat_capacity</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;pipe heat_capacity&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PipeParameter.to_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.PipeParameter.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get PipeParameter dictionary.&quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;PipeParameter&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;inner_diameter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">inner_diameter</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;outer_diameter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">outer_diameter</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;shank_spacing&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shank_spacing</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;roughness&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">roughness</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;conductivity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;heat_capacity&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">heat_capacity</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="PipeParameter.duplicate"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.PipeParameter.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a copy of this object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">PipeParameter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inner_diameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">outer_diameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">shank_spacing</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">roughness</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">conductivity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">heat_capacity</span><span class="p">)</span>
+
+<div class="viewcode-block" id="PipeParameter.ToString"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.PipeParameter.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overwrite .NET ToString method.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent PipeParameter.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;PipeParameter: [diameter: </span><span class="si">{}</span><span class="s1">m - </span><span class="si">{}</span><span class="s1">m]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">inner_diameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">outer_diameter</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BoreholeParameter"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.BoreholeParameter">[docs]</a><span class="k">class</span> <span class="nc">BoreholeParameter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents the borehole properties within a ground heat exchanger field.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        length: A number for the length of the borehole in meters. This is the</span>
+<span class="sd">            distance from the bottom of the heat exchanging part of the borehole</span>
+<span class="sd">            to the top. (Default: 96).</span>
+<span class="sd">        buried_depth: A number for the depth below the ground surface at which</span>
+<span class="sd">            the top of the heat exchanging part of the borehole sits in</span>
+<span class="sd">            meters. (Default: 2).</span>
+<span class="sd">        diameter: A number for the diameter of the borehole in meters. (Default: 0.15).</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * length</span>
+<span class="sd">        * buried_depth</span>
+<span class="sd">        * diameter</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;_length&#39;</span><span class="p">,</span> <span class="s1">&#39;_buried_depth&#39;</span><span class="p">,</span> <span class="s1">&#39;_diameter&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">96</span><span class="p">,</span> <span class="n">buried_depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">diameter</span><span class="o">=</span><span class="mf">0.15</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize BoreholeParameter.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">length</span> <span class="o">=</span> <span class="n">length</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">buried_depth</span> <span class="o">=</span> <span class="n">buried_depth</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span> <span class="o">=</span> <span class="n">diameter</span>
+
+<div class="viewcode-block" id="BoreholeParameter.from_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.BoreholeParameter.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a BoreholeParameter object from a dictionary</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of an BoreholeParameter object</span>
+<span class="sd">                in the format below.</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &#39;type&#39;: &#39;BoreholeParameter&#39;,</span>
+<span class="sd">            &#39;length&#39;: 120,  # float in meters</span>
+<span class="sd">            &#39;buried_depth&#39;: 4,  # float in meters</span>
+<span class="sd">            &#39;diameter&#39;: 0.2  # float in meters</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">length</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;length&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">96</span>
+        <span class="n">dth</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;buried_depth&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;buried_depth&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">2</span>
+        <span class="n">dia</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;diameter&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;diameter&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">0.15</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">length</span><span class="p">,</span> <span class="n">dth</span><span class="p">,</span> <span class="n">dia</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the length of the borehole in meters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_length</span>
+
+    <span class="nd">@length</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_length</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;borehole length&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">buried_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the depth of the top of the borehole in meters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buried_depth</span>
+
+    <span class="nd">@buried_depth</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">buried_depth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_buried_depth</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;borehole buried_depth&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the diameter of the borehole in meters.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_diameter</span>
+
+    <span class="nd">@diameter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_diameter</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;borehole diameter&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BoreholeParameter.to_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.BoreholeParameter.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get BoreholeParameter dictionary.&quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;BoreholeParameter&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;length&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">length</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;buried_depth&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buried_depth</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;diameter&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="BoreholeParameter.duplicate"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.BoreholeParameter.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a copy of this object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">BoreholeParameter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">buried_depth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span><span class="p">)</span>
+
+<div class="viewcode-block" id="BoreholeParameter.ToString"><a class="viewcode-back" href="../../../dragonfly_energy.des.ghe.html#dragonfly_energy.des.ghe.BoreholeParameter.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overwrite .NET ToString method.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent BoreholeParameter.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;BoreholeParameter: [length: </span><span class="si">{}</span><span class="s1">m] &#39;</span> \
+            <span class="s1">&#39;[heat diameter: </span><span class="si">{}</span><span class="s1">m]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2023, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

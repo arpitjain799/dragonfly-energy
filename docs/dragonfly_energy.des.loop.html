@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>dragonfly_energy.des.loop module &#8212; dragonfly-energy  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dragonfly_energy.opendss package" href="dragonfly_energy.opendss.html" />
+    <link rel="prev" title="dragonfly_energy.des.junction module" href="dragonfly_energy.des.junction.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          dragonfly-energy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate">dragonfly-energy translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate-model-to-gbxml">model-to-gbxml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate-model-to-idf">model-to-idf</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate-model-to-osm">model-to-osm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cli/simulate.html">simulate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/simulate.html#dragonfly-energy-simulate">dragonfly-energy simulate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/simulate.html#dragonfly-energy-simulate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dragonfly_energy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html">dragonfly_energy.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.cli.simulate.html">dragonfly_energy.cli.simulate module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.cli.translate.html">dragonfly_energy.cli.translate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.cli.html#module-dragonfly_energy.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4 current"><a class="reference internal" href="dragonfly_energy.des.html">dragonfly_energy.des package</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="dragonfly_energy.des.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.lib.html">dragonfly_energy.opendss.lib package</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_energy.opendss.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="dragonfly_energy.opendss.lib.powerlines.html">dragonfly_energy.opendss.lib.powerlines module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="dragonfly_energy.opendss.lib.transformers.html">dragonfly_energy.opendss.lib.transformers module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="dragonfly_energy.opendss.lib.wires.html">dragonfly_energy.opendss.lib.wires module</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_energy.opendss.lib.html#module-dragonfly_energy.opendss.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.wire.html">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html">dragonfly_energy.properties package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.building.html">dragonfly_energy.properties.building module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.context.html">dragonfly_energy.properties.context module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.model.html">dragonfly_energy.properties.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.room2d.html">dragonfly_energy.properties.room2d module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.story.html">dragonfly_energy.properties.story module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.html#module-dragonfly_energy.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.measure.html">dragonfly_energy.measure module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dragonfly_energy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html">dragonfly_energy.cli package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="dragonfly_energy.des.html">dragonfly_energy.des package</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="dragonfly_energy.des.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html">dragonfly_energy.properties package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="dragonfly_energy.des.junction.html" title="Previous Chapter: dragonfly_energy.des.junction module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; dragonfly_ene...</span>
+    </a>
+  </li>
+  <li>
+    <a href="dragonfly_energy.opendss.html" title="Next Chapter: dragonfly_energy.opendss package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">dragonfly_ene... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/dragonfly_energy.des.loop.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dragonfly_energy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html">dragonfly_energy.cli package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="dragonfly_energy.des.html">dragonfly_energy.des package</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="dragonfly_energy.des.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html">dragonfly_energy.properties package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <section id="module-dragonfly_energy.des.loop">
+<span id="dragonfly-energy-des-loop-module"></span><h1>dragonfly_energy.des.loop module<a class="headerlink" href="#module-dragonfly_energy.des.loop" title="Permalink to this headline">¶</a></h1>
+<p>Thermal Loop of a District Energy System (DES).</p>
+<dl class="py class">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop">
+<em class="property">class </em><code class="sig-prename descclassname">dragonfly_energy.des.loop.</code><code class="sig-name descname">GHEThermalLoop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">identifier</span></em>, <em class="sig-param"><span class="n">ground_heat_exchanger</span></em>, <em class="sig-param"><span class="n">connectors</span></em>, <em class="sig-param"><span class="n">clockwise_flow</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents an Ground Heat Exchanger Thermal Loop in a DES.</p>
+<p>This includes a GroundHeatExchanger and all thermal connectors needed
+to connect these objects to Dragonfly Buildings in a loop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> – Text string for a unique thermal loop ID. Must contain only
+characters that are acceptable in OpenDSS. This will be used to
+identify the object across the exported geoJSON and OpenDSS files.</p></li>
+<li><p><strong>ground_heat_exchanger</strong> – A GroundHeatExchanger object representing the field
+of boreholes that supplies the loop with thermal capacity.</p></li>
+<li><p><strong>connectors</strong> – An array of ThermalConnector objects that are included
+within the thermal loop. In order for a given connector to be
+valid within the loop, each end of the connector must touch either
+another connector, a building footprint, or the ground_heat_exchanger. In
+order for the loop as a whole to be valid, the connectors must form a
+single continuous loop when passed through the buildings and the heat
+exchanger field.</p></li>
+<li><p><strong>clockwise_flow</strong> – A boolean to note whether the direction of flow through the
+loop is clockwise (True) when viewed from above in the GeoJSON or it
+is counterclockwise (False). (Default: False).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Properties:</dt><dd><ul class="simple">
+<li><p>identifier</p></li>
+<li><p>display_name</p></li>
+<li><p>ground_heat_exchanger</p></li>
+<li><p>connectors</p></li>
+<li><p>clockwise_flow</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.ToString">
+<code class="sig-name descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.ToString" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.assign_junction_buildings">
+<em class="property">static </em><code class="sig-name descname">assign_junction_buildings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">junctions</span></em>, <em class="sig-param"><span class="n">buildings</span></em>, <em class="sig-param"><span class="n">tolerance</span><span class="o">=</span><span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.assign_junction_buildings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.assign_junction_buildings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign building_identifiers to a list of junctions using dragonfly Buildings.</p>
+<p>Junctions will be assigned to a given Building if they are touching
+the footprint of that building in 2D space.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>junctions</strong> – An array of ThermalJunction objects to be associated
+with Dragonfly Buildings.</p></li>
+<li><p><strong>buildings</strong> – An array of Dragonfly Building objects in the same units
+system as the ThermalLoop geometry.</p></li>
+<li><p><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+geometries at which they are considered co-located. (Default: 0.01,
+suitable for objects in meters).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.convert_to_units">
+<code class="sig-name descname">convert_to_units</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'Meters'</span></em>, <em class="sig-param"><span class="n">starting_units</span><span class="o">=</span><span class="default_value">'Meters'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.convert_to_units"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.convert_to_units" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert all of the geometry in this ThermalLoop to certain units.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>units</strong> – <p>Text for the units to which the Model geometry should be
+converted. (Default: Meters). Choose from the following:</p>
+<ul>
+<li><p>Meters</p></li>
+<li><p>Millimeters</p></li>
+<li><p>Feet</p></li>
+<li><p>Inches</p></li>
+<li><p>Centimeters</p></li>
+</ul>
+</p></li>
+<li><p><strong>starting_units</strong> – The starting units system of the loop. (Default: Meters).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.duplicate">
+<code class="sig-name descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize an GHEThermalLoop from a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – A dictionary representation of an GHEThermalLoop object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.from_geojson">
+<em class="property">classmethod </em><code class="sig-name descname">from_geojson</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">geojson_file_path</span></em>, <em class="sig-param"><span class="n">location</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">point</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'Meters'</span></em>, <em class="sig-param"><span class="n">clockwise_flow</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.from_geojson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.from_geojson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an GHEThermalLoop from a dictionary as it appears in a GeoJSON.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geojson_file_path</strong> – Text for the full path to the geojson file to load
+as GHEThermalLoop.</p></li>
+<li><p><strong>location</strong> – An optional ladybug location object with longitude and
+latitude data defining the origin of the geojson file. If None,
+an attempt will be made to sense the location from the project
+point in the GeoJSON (if it exists). If nothing is found, the
+origin is autocalcualted as the bottom-left corner of the bounding
+box of all building footprints in the geojson file. (Default: None).</p></li>
+<li><p><strong>point</strong> – A ladybug_geometry Point2D for where the location object exists
+within the space of a scene. The coordinates of this point are
+expected to be in the units input. If None, an attempt will be
+made to sense the CAD coordinates from the GeoJSON if they
+exist. If not found, they will default to (0, 0).</p></li>
+<li><p><strong>units</strong> – <p>Text for the units system in which the model geometry
+exists. Default: ‘Meters’. Choose from the following:</p>
+<ul>
+<li><p>Meters</p></li>
+<li><p>Millimeters</p></li>
+<li><p>Feet</p></li>
+<li><p>Inches</p></li>
+<li><p>Centimeters</p></li>
+</ul>
+<p>Note that this method assumes the point coordinates are in the
+same units.</p>
+</p></li>
+<li><p><strong>clockwise_flow</strong> – A boolean to note whether the direction of flow through the
+loop is clockwise (True) when viewed from above in the GeoJSON or it
+is counterclockwise (False). (Default: False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.junctions">
+<code class="sig-name descname">junctions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tolerance</span><span class="o">=</span><span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.junctions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.junctions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of ThermalJunction objects for the unique thermal loop junctions.</p>
+<p>The resulting ThermalJunction objects will be associated with the loop’s
+GroundHeatExchanger if they are in contact with it (within the tolerance).
+However, they won’t have any building_identifier associated with them.
+The assign_junction_buildings method on this object can be used
+to associate the junctions with an array of Dragonfly Buildings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+faces at which they can be considered centered adjacent. (Default: 0.01,
+suitable for objects in meters).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p>A tuple with two items.</p>
+<ul class="simple">
+<li><p>junctions - A list of lists of the unique ThermalJunction objects
+that exist across the loop.</p></li>
+<li><p>connector_junction_ids - A list of lists that align with the connectors
+in the loop. Each sub-list contains two string values for the junction
+IDs for each of the start and end of each of the connectors.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.loop_polygon">
+<code class="sig-name descname">loop_polygon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buildings</span></em>, <em class="sig-param"><span class="n">tolerance</span><span class="o">=</span><span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.loop_polygon"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.loop_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a Polygon2D for the single continuous loop formed by connectors.</p>
+<p>This method will raise an exception if the ThermalConnectors do not form
+a single continuous loop through the Buildings and the ground_heat_exchanger.
+The Polygon2D will have the correct clockwise ordering according to this
+object’s clockwise_flow property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buildings</strong> – An array of Dragonfly Building objects in the same units
+system as the GHEThermalLoop geometry.</p></li>
+<li><p><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+geometries at which they are considered co-located. (Default: 0.01,
+suitable for objects in meters).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.move">
+<code class="sig-name descname">move</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">moving_vec</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.move"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move this object along a vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>moving_vec</strong> – A ladybug_geometry Vector3D with the direction and distance
+to move the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.ordered_connectors">
+<code class="sig-name descname">ordered_connectors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buildings</span></em>, <em class="sig-param"><span class="n">tolerance</span><span class="o">=</span><span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.ordered_connectors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.ordered_connectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the ThermalConnectors of this GHEThermalLoop correctly ordered in a loop.</p>
+<p>The resulting connectors will not only be ordered correctly along the loop
+but the orientation of the connector geometries will be property coordinated
+with the clockwise_flow property on this object.</p>
+<p>This method will raise an exception if the ThermalConnectors do not form
+a single continuous loop through the Buildings and the ground_heat_exchanger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buildings</strong> – An array of Dragonfly Building objects in the same units
+system as the GHEThermalLoop geometry.</p></li>
+<li><p><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+geometries at which they are considered co-located. (Default: 0.01,
+suitable for objects in meters).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.reflect">
+<code class="sig-name descname">reflect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">plane</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.reflect"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.reflect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reflect this object across a plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>plane</strong> – A ladybug_geometry Plane across which the object will be reflected.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.rotate_xy">
+<code class="sig-name descname">rotate_xy</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">angle</span></em>, <em class="sig-param"><span class="n">origin</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.rotate_xy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.rotate_xy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotate this object counterclockwise in the XY plane by a certain angle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> – An angle in degrees.</p></li>
+<li><p><strong>origin</strong> – A ladybug_geometry Point3D for the origin around which the
+object will be rotated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.scale">
+<code class="sig-name descname">scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">factor</span></em>, <em class="sig-param"><span class="n">origin</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scale this object by a factor from an origin point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>factor</strong> – A number representing how much the object should be scaled.</p></li>
+<li><p><strong>origin</strong> – A ladybug_geometry Point3D representing the origin from which
+to scale. If None, it will be scaled from the World origin (0, 0, 0).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.to_des_param_dict">
+<code class="sig-name descname">to_des_param_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buildings</span></em>, <em class="sig-param"><span class="n">tolerance</span><span class="o">=</span><span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.to_des_param_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.to_des_param_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the DES System Parameter dictionary for the ThermalLoop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buildings</strong> – An array of Dragonfly Building objects in the same units
+system as the GHEThermalLoop geometry.</p></li>
+<li><p><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+geometries at which they are considered co-located. (Default: 0.01,
+suitable for objects in meters).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>GHEThermalLoop dictionary representation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.to_geojson_dict">
+<code class="sig-name descname">to_geojson_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buildings</span></em>, <em class="sig-param"><span class="n">location</span></em>, <em class="sig-param"><span class="n">point</span><span class="o">=</span><span class="default_value">Point2D(0.0, 0.0)</span></em>, <em class="sig-param"><span class="n">tolerance</span><span class="o">=</span><span class="default_value">0.01</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/des/loop.html#GHEThermalLoop.to_geojson_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.to_geojson_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get GHEThermalLoop dictionary as it appears in an URBANopt geoJSON.</p>
+<p>The resulting dictionary array can be directly appended to the “features”
+key of a base GeoJSON dict in order to represent the loop in the
+GeoJSON. Note that, in order to successfully simulate the DES, you will also
+have to write a system_parameter.json from this GHEThermalLoop using
+the to_des_param_dict method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buildings</strong> – An array of Dragonfly Building objects in the same units
+system as the GHEThermalLoop geometry.</p></li>
+<li><p><strong>location</strong> – A ladybug Location object possessing longitude and latitude data.</p></li>
+<li><p><strong>point</strong> – A ladybug_geometry Point2D for where the location object exists
+within the space of a scene. The coordinates of this point are
+expected to be in the units of this Model. (Default: (0, 0)).</p></li>
+<li><p><strong>tolerance</strong> – The minimum difference between the coordinate values of two
+geometries at which they are considered co-located. (Default: 0.01,
+suitable for objects in meters).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.clockwise_flow">
+<em class="property">property </em><code class="sig-name descname">clockwise_flow</code><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.clockwise_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a boolean for whether the flow through the loop is clockwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.connectors">
+<em class="property">property </em><code class="sig-name descname">connectors</code><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.connectors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the list of ThermalConnector objects within the loop.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.display_name">
+<em class="property">property </em><code class="sig-name descname">display_name</code><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a string for the object name without any character restrictions.</p>
+<p>If not set, this will be equal to the identifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.ground_heat_exchanger">
+<em class="property">property </em><code class="sig-name descname">ground_heat_exchanger</code><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.ground_heat_exchanger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a GroundHeatExchanger object for the loop’s ground heat exchanger.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.des.loop.GHEThermalLoop.identifier">
+<em class="property">property </em><code class="sig-name descname">identifier</code><a class="headerlink" href="#dragonfly_energy.des.loop.GHEThermalLoop.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set the text string for unique object identifier.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2023, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

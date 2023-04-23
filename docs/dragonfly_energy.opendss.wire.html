@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>dragonfly_energy.opendss.wire module &#8212; dragonfly-energy  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="dragonfly_energy.properties package" href="dragonfly_energy.properties.html" />
+    <link rel="prev" title="dragonfly_energy.opendss.transformerprop module" href="dragonfly_energy.opendss.transformerprop.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          dragonfly-energy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate">dragonfly-energy translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate-model-to-gbxml">model-to-gbxml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate-model-to-idf">model-to-idf</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/translate.html#dragonfly-energy-translate-model-to-osm">model-to-osm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cli/simulate.html">simulate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/simulate.html#dragonfly-energy-simulate">dragonfly-energy simulate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/simulate.html#dragonfly-energy-simulate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dragonfly_energy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html">dragonfly_energy.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.cli.simulate.html">dragonfly_energy.cli.simulate module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.cli.translate.html">dragonfly_energy.cli.translate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.cli.html#module-dragonfly_energy.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.des.html">dragonfly_energy.des package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.des.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.des.loop.html">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4 current"><a class="reference internal" href="dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.lib.html">dragonfly_energy.opendss.lib package</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_energy.opendss.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="dragonfly_energy.opendss.lib.powerlines.html">dragonfly_energy.opendss.lib.powerlines module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="dragonfly_energy.opendss.lib.transformers.html">dragonfly_energy.opendss.lib.transformers module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="dragonfly_energy.opendss.lib.wires.html">dragonfly_energy.opendss.lib.wires module</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="dragonfly_energy.opendss.lib.html#module-dragonfly_energy.opendss.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5 current"><a class="reference internal" href="dragonfly_energy.opendss.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html">dragonfly_energy.properties package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.building.html">dragonfly_energy.properties.building module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.context.html">dragonfly_energy.properties.context module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.model.html">dragonfly_energy.properties.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.room2d.html">dragonfly_energy.properties.room2d module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.properties.story.html">dragonfly_energy.properties.story module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.properties.html#module-dragonfly_energy.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.measure.html">dragonfly_energy.measure module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dragonfly_energy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html">dragonfly_energy.cli package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.des.html">dragonfly_energy.des package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#subpackages">Subpackages</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="dragonfly_energy.opendss.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html">dragonfly_energy.properties package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="dragonfly_energy.opendss.transformerprop.html" title="Previous Chapter: dragonfly_energy.opendss.transformerprop module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; dragonfly_ene...</span>
+    </a>
+  </li>
+  <li>
+    <a href="dragonfly_energy.properties.html" title="Next Chapter: dragonfly_energy.properties package"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">dragonfly_ene... &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/dragonfly_energy.opendss.wire.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">dragonfly_energy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="dragonfly_energy.html">dragonfly_energy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="dragonfly_energy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.cli.html">dragonfly_energy.cli package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.des.html">dragonfly_energy.des package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#subpackages">Subpackages</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="dragonfly_energy.opendss.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="dragonfly_energy.properties.html">dragonfly_energy.properties package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <section id="module-dragonfly_energy.opendss.wire">
+<span id="dragonfly-energy-opendss-wire-module"></span><h1>dragonfly_energy.opendss.wire module<a class="headerlink" href="#module-dragonfly_energy.opendss.wire" title="Permalink to this headline">¶</a></h1>
+<p>Wire in OpenDSS.</p>
+<dl class="py class">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties">
+<em class="property">class </em><code class="sig-prename descclassname">dragonfly_energy.opendss.wire.</code><code class="sig-name descname">ConcentricProperties</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#ConcentricProperties"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents the concentric neutral properties of a wire in OpenDSS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geometrical_mean_radius</strong> – A number for the geometric mean of distances between
+the neutral strands in millimeters. (Default: 0.8).</p></li>
+<li><p><strong>resistance</strong> – A number for the electrical resistance of the neutral strands in
+ohms per kilometer of wire. (Default: 5.8).</p></li>
+<li><p><strong>concentric_strand_diameter</strong> – A number for the diameter of the neutral strand
+in millimeters. (Default: 2).</p></li>
+<li><p><strong>concentric_outside_diameter</strong> – A number for the outside diameter of the neutral
+strand in millimeters. (Default: 45).</p></li>
+<li><p><strong>strand_count</strong> – A positive integer for the number of concentric neutral
+strands. (Default: 24)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Properties:</dt><dd><ul class="simple">
+<li><p>geometrical_mean_radius</p></li>
+<li><p>resistance</p></li>
+<li><p>concentric_strand_diameter</p></li>
+<li><p>concentric_outside_diameter</p></li>
+<li><p>strand_count</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.ToString">
+<code class="sig-name descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#ConcentricProperties.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.duplicate">
+<code class="sig-name descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#ConcentricProperties.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#ConcentricProperties.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a ConcentricProperties object from a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – A dictionary representation of a ConcentricProperties object
+in the format below.</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ConcentricProperties&#39;</span><span class="p">,</span>
+<span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>  <span class="c1"># gmr in mm</span>
+<span class="s1">&#39;resistance&#39;</span><span class="p">:</span> <span class="mf">5.8</span><span class="p">,</span>  <span class="c1"># resistance of the wire in ohms/km</span>
+<span class="s1">&#39;concentric_strand_diameter&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>  <span class="c1"># diameter of the wire in mm</span>
+<span class="s1">&#39;concentric_outside_diameter&#39;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>  <span class="c1"># outside diameter of the wire in mm</span>
+<span class="s1">&#39;strand_count&#39;</span><span class="p">:</span> <span class="mi">24</span>  <span class="c1"># integer for the number of strands</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.lock">
+<code class="sig-name descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.lock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#ConcentricProperties.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get ConcentricProperties dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.unlock">
+<code class="sig-name descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.unlock" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.concentric_outside_diameter">
+<em class="property">property </em><code class="sig-name descname">concentric_outside_diameter</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.concentric_outside_diameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the outside diameter of the neutral strand in mm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.concentric_strand_diameter">
+<em class="property">property </em><code class="sig-name descname">concentric_strand_diameter</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.concentric_strand_diameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the diameter of the neutral strand in mm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.geometrical_mean_radius">
+<em class="property">property </em><code class="sig-name descname">geometrical_mean_radius</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.geometrical_mean_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the geometrical mean radius of the strands in mm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.resistance">
+<em class="property">property </em><code class="sig-name descname">resistance</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.resistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the resistance of the strands in ohms per km of wire.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.ConcentricProperties.strand_count">
+<em class="property">property </em><code class="sig-name descname">strand_count</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.ConcentricProperties.strand_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a positive integer for the number of concentric neutral strands.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="dragonfly_energy.opendss.wire.Wire">
+<em class="property">class </em><code class="sig-prename descclassname">dragonfly_energy.opendss.wire.</code><code class="sig-name descname">Wire</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Represents the properties of a wire in OpenDSS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>identifier</strong> – Text string for a unique wire property ID. Must contain only
+characters that are acceptable in OpenDSS. This will be used to
+identify the object across the exported geoJSON and OpenDSS files.</p></li>
+<li><p><strong>ampacity</strong> – A number for the ampacity of the wire in amps. (Default: 220).</p></li>
+<li><p><strong>geometrical_mean_radius</strong> – A number for the geometric mean of distances between
+the strands of the conductor in millimeters. (Default: 3.9).</p></li>
+<li><p><strong>resistance</strong> – A number for the electrical resistance of the conductor in
+ohms per kilometer of wire. (Default: 0.3937).</p></li>
+<li><p><strong>diameter</strong> – A number for the diameter of the wire in millimeters. (Default: 10).</p></li>
+<li><p><strong>voltage_level</strong> – Text to denote the level of voltage that the wire is designed to
+carry. Choose from (“LV”, “MV”, “LV or MV”). (Default: “MV”).</p></li>
+<li><p><strong>wire_type</strong> – Text for the type of wire, denoting whether the wire is overhead
+(OH) or underground (UG). Choose from (‘OH’, ‘UG’, ‘UG concentric
+neutral’). (Default: “OH”).</p></li>
+<li><p><strong>concentric_properties</strong> – A ConcentricProperties object to denote the concentric
+neutral properties of the Wire. This must be specified when the wire_type
+is “UG concentric neutral.” (Default: None).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Properties:</dt><dd><ul class="simple">
+<li><p>identifier</p></li>
+<li><p>display_name</p></li>
+<li><p>ampacity</p></li>
+<li><p>geometrical_mean_radius</p></li>
+<li><p>resistance</p></li>
+<li><p>diameter</p></li>
+<li><p>voltage_level</p></li>
+<li><p>wire_type</p></li>
+<li><p>concentric_properties</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.ToString">
+<code class="sig-name descname">ToString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.ToString"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.ToString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite .NET ToString method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.duplicate">
+<code class="sig-name descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.duplicate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a copy of this object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.from_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Wire object from a dictionary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – A dictionary representation of a Wire object in the format below.</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Wire&#39;</span><span class="p">,</span>
+<span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="s1">&#39;OH AL 2/0 A&#39;</span><span class="p">,</span>  <span class="c1"># unique wire property identifier</span>
+<span class="s1">&#39;ampacity&#39;</span><span class="p">:</span> <span class="mi">220</span><span class="p">,</span>  <span class="c1"># ampacity of the wire in amps</span>
+<span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">:</span> <span class="mf">3.9</span><span class="p">,</span>  <span class="c1"># gmr in mm</span>
+<span class="s1">&#39;resistance&#39;</span><span class="p">:</span> <span class="mf">0.3937</span><span class="p">,</span>  <span class="c1"># resistance of the wire in ohms/km</span>
+<span class="s1">&#39;diameter&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1"># diameter of the wire in mm</span>
+<span class="s1">&#39;voltage_level&#39;</span><span class="p">:</span> <span class="s1">&#39;LV or MV&#39;</span><span class="p">,</span>  <span class="c1"># text for the voltage level</span>
+<span class="s1">&#39;wire_type&#39;</span><span class="p">:</span> <span class="s1">&#39;OH&#39;</span>  <span class="c1"># text for the type of wire</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.from_electrical_database_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_electrical_database_dict</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.from_electrical_database_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.from_electrical_database_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a Wire from an dictionary as it appears in electrical_database.json.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> – A dictionary representation of a Wire object in the format below.</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s1">&#39;nameclass&#39;</span><span class="p">:</span> <span class="s1">&#39;OH AL 2/0 A&#39;</span><span class="p">,</span>  <span class="c1"># unique wire property identifier</span>
+<span class="s1">&#39;ampacity (A)&#39;</span><span class="p">:</span> <span class="mi">220</span><span class="p">,</span>  <span class="c1"># ampacity of the wire in amps</span>
+<span class="s1">&#39;gmr (mm)&#39;</span><span class="p">:</span> <span class="mf">3.9</span><span class="p">,</span>  <span class="c1"># gmr in meters</span>
+<span class="s1">&#39;resistance (ohm/km)&#39;</span><span class="p">:</span> <span class="mf">0.3937</span><span class="p">,</span>  <span class="c1"># resistance of the wire in ohms/km</span>
+<span class="s1">&#39;diameter (mm)&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c1"># diameter of the wire in meters</span>
+<span class="s1">&#39;voltage level&#39;</span><span class="p">:</span> <span class="s1">&#39;MV&#39;</span><span class="p">,</span>
+<span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;OH&#39;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.lock">
+<code class="sig-name descname">lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>The lock() method will also lock the concentric_properties.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.to_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Wire dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.to_electrical_database_dict">
+<code class="sig-name descname">to_electrical_database_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.to_electrical_database_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.to_electrical_database_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Wire as it should appear in the URBANopt electrical database.json.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.unlock">
+<code class="sig-name descname">unlock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/dragonfly_energy/opendss/wire.html#Wire.unlock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unlock() method will also unlock the concentric_properties.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="dragonfly_energy.opendss.wire.Wire.VALID_VOLTAGE_LEVELS">
+<code class="sig-name descname">VALID_VOLTAGE_LEVELS</code><em class="property"> = ('LV', 'MV', 'LV or MV')</em><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.VALID_VOLTAGE_LEVELS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="dragonfly_energy.opendss.wire.Wire.VALID_WIRE_TYPES">
+<code class="sig-name descname">VALID_WIRE_TYPES</code><em class="property"> = ('OH', 'UG', 'UG concentric neutral')</em><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.VALID_WIRE_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.ampacity">
+<em class="property">property </em><code class="sig-name descname">ampacity</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.ampacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the ampacity of the wire in amps.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.concentric_properties">
+<em class="property">property </em><code class="sig-name descname">concentric_properties</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.concentric_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set an array of Wire objects for the phases of the wires.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.diameter">
+<em class="property">property </em><code class="sig-name descname">diameter</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.diameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the diameter of the wire in mm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.display_name">
+<em class="property">property </em><code class="sig-name descname">display_name</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a string for the object name without any character restrictions.</p>
+<p>If not set, this will be equal to the identifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.geometrical_mean_radius">
+<em class="property">property </em><code class="sig-name descname">geometrical_mean_radius</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.geometrical_mean_radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the geometrical mean radius of the wire in mm.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.identifier">
+<em class="property">property </em><code class="sig-name descname">identifier</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.identifier" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a text string for the unique object identifier.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.resistance">
+<em class="property">property </em><code class="sig-name descname">resistance</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.resistance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a number for the resistance of the wire in ohms per km of wire.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.voltage_level">
+<em class="property">property </em><code class="sig-name descname">voltage_level</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.voltage_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set text for the voltage level of the wire. (LV, MV, LV or MV).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="dragonfly_energy.opendss.wire.Wire.wire_type">
+<em class="property">property </em><code class="sig-name descname">wire_type</code><a class="headerlink" href="#dragonfly_energy.opendss.wire.Wire.wire_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get or set a text string for the type of wire.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2023, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

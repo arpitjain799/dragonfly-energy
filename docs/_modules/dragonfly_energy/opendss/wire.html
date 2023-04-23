@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dragonfly_energy.opendss.wire &#8212; dragonfly-energy  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          dragonfly-energy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate">dragonfly-energy translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-gbxml">model-to-gbxml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-idf">model-to-idf</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-osm">model-to-osm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/simulate.html">simulate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate">dragonfly-energy simulate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../dragonfly_energy.html">dragonfly_energy package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.cli.html">dragonfly_energy.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.simulate.html">dragonfly_energy.cli.simulate module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.translate.html">dragonfly_energy.cli.translate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#module-dragonfly_energy.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.des.html">dragonfly_energy.des package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.loop.html">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html">dragonfly_energy.opendss.lib package</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.powerlines.html">dragonfly_energy.opendss.lib.powerlines module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.transformers.html">dragonfly_energy.opendss.lib.transformers module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.wires.html">dragonfly_energy.opendss.lib.wires module</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#module-dragonfly_energy.opendss.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.wire.html">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.properties.html">dragonfly_energy.properties package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.building.html">dragonfly_energy.properties.building module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.context.html">dragonfly_energy.properties.context module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.model.html">dragonfly_energy.properties.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.room2d.html">dragonfly_energy.properties.room2d module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.story.html">dragonfly_energy.properties.story module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#module-dragonfly_energy.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.measure.html">dragonfly_energy.measure module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <h1>Source code for dragonfly_energy.opendss.wire</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="sd">&quot;&quot;&quot;Wire in OpenDSS.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+
+<span class="kn">from</span> <span class="nn">honeybee._lockable</span> <span class="kn">import</span> <span class="n">lockable</span>
+<span class="kn">from</span> <span class="nn">honeybee.typing</span> <span class="kn">import</span> <span class="n">float_positive</span><span class="p">,</span> <span class="n">int_positive</span><span class="p">,</span> <span class="n">valid_ep_string</span>
+
+
+<div class="viewcode-block" id="Wire"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">Wire</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents the properties of a wire in OpenDSS.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        identifier: Text string for a unique wire property ID. Must contain only</span>
+<span class="sd">            characters that are acceptable in OpenDSS. This will be used to</span>
+<span class="sd">            identify the object across the exported geoJSON and OpenDSS files.</span>
+<span class="sd">        ampacity: A number for the ampacity of the wire in amps. (Default: 220).</span>
+<span class="sd">        geometrical_mean_radius: A number for the geometric mean of distances between</span>
+<span class="sd">            the strands of the conductor in millimeters. (Default: 3.9).</span>
+<span class="sd">        resistance: A number for the electrical resistance of the conductor in</span>
+<span class="sd">            ohms per kilometer of wire. (Default: 0.3937).</span>
+<span class="sd">        diameter: A number for the diameter of the wire in millimeters. (Default: 10).</span>
+<span class="sd">        voltage_level: Text to denote the level of voltage that the wire is designed to</span>
+<span class="sd">            carry. Choose from (&quot;LV&quot;, &quot;MV&quot;, &quot;LV or MV&quot;). (Default: &quot;MV&quot;).</span>
+<span class="sd">        wire_type: Text for the type of wire, denoting whether the wire is overhead</span>
+<span class="sd">            (OH) or underground (UG). Choose from (&#39;OH&#39;, &#39;UG&#39;, &#39;UG concentric</span>
+<span class="sd">            neutral&#39;). (Default: &quot;OH&quot;).</span>
+<span class="sd">        concentric_properties: A ConcentricProperties object to denote the concentric</span>
+<span class="sd">            neutral properties of the Wire. This must be specified when the wire_type</span>
+<span class="sd">            is &quot;UG concentric neutral.&quot; (Default: None).</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * identifier</span>
+<span class="sd">        * display_name</span>
+<span class="sd">        * ampacity</span>
+<span class="sd">        * geometrical_mean_radius</span>
+<span class="sd">        * resistance</span>
+<span class="sd">        * diameter</span>
+<span class="sd">        * voltage_level</span>
+<span class="sd">        * wire_type</span>
+<span class="sd">        * concentric_properties</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;_locked&#39;</span><span class="p">,</span> <span class="s1">&#39;_display_name&#39;</span><span class="p">,</span> <span class="s1">&#39;_identifier&#39;</span><span class="p">,</span> <span class="s1">&#39;_ampacity&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_geometrical_mean_radius&#39;</span><span class="p">,</span> <span class="s1">&#39;_resistance&#39;</span><span class="p">,</span> <span class="s1">&#39;_diameter&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_voltage_level&#39;</span><span class="p">,</span> <span class="s1">&#39;_wire_type&#39;</span><span class="p">,</span> <span class="s1">&#39;_concentric_properties&#39;</span>
+    <span class="p">)</span>
+
+    <span class="n">VALID_VOLTAGE_LEVELS</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;LV&#39;</span><span class="p">,</span> <span class="s1">&#39;MV&#39;</span><span class="p">,</span> <span class="s1">&#39;LV or MV&#39;</span><span class="p">)</span>
+    <span class="n">VALID_WIRE_TYPES</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;OH&#39;</span><span class="p">,</span> <span class="s1">&#39;UG&#39;</span><span class="p">,</span> <span class="s1">&#39;UG concentric neutral&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">ampacity</span><span class="o">=</span><span class="mi">220</span><span class="p">,</span> <span class="n">geometrical_mean_radius</span><span class="o">=</span><span class="mf">3.9</span><span class="p">,</span>
+                 <span class="n">resistance</span><span class="o">=</span><span class="mf">0.3937</span><span class="p">,</span> <span class="n">diameter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">voltage_level</span><span class="o">=</span><span class="s1">&#39;MV&#39;</span><span class="p">,</span>
+                 <span class="n">wire_type</span><span class="o">=</span><span class="s1">&#39;OH&#39;</span><span class="p">,</span> <span class="n">concentric_properties</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize Wire&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># unlocked by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span> <span class="o">=</span> <span class="n">identifier</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ampacity</span> <span class="o">=</span> <span class="n">ampacity</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span> <span class="o">=</span> <span class="n">geometrical_mean_radius</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="n">resistance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span> <span class="o">=</span> <span class="n">diameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">voltage_level</span> <span class="o">=</span> <span class="n">voltage_level</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span> <span class="o">=</span> <span class="n">concentric_properties</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">wire_type</span> <span class="o">=</span> <span class="n">wire_type</span>
+
+<div class="viewcode-block" id="Wire.from_dict"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a Wire object from a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of a Wire object in the format below.</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &#39;type&#39;: &#39;Wire&#39;,</span>
+<span class="sd">            &#39;identifier&#39;: &#39;OH AL 2/0 A&#39;,  # unique wire property identifier</span>
+<span class="sd">            &#39;ampacity&#39;: 220,  # ampacity of the wire in amps</span>
+<span class="sd">            &#39;geometrical_mean_radius&#39;: 3.9,  # gmr in mm</span>
+<span class="sd">            &#39;resistance&#39;: 0.3937,  # resistance of the wire in ohms/km</span>
+<span class="sd">            &#39;diameter&#39;: 10,  # diameter of the wire in mm</span>
+<span class="sd">            &#39;voltage_level&#39;: &#39;LV or MV&#39;,  # text for the voltage level</span>
+<span class="sd">            &#39;wire_type&#39;: &#39;OH&#39;  # text for the type of wire</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">amp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ampacity&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;ampacity&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">220</span>
+        <span class="n">gmr</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;geometrical_mean_radius&#39;</span> <span class="ow">in</span> <span class="n">data</span> \
+            <span class="k">else</span> <span class="mf">3.9</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;resistance&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;resistance&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">0.3937</span>
+        <span class="n">dim</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;diameter&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;diameter&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">10</span>
+        <span class="n">vl</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;voltage_level&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;voltage_level&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="s1">&#39;MV&#39;</span>
+        <span class="n">wt</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;wire_type&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;wire_type&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="s1">&#39;OH&#39;</span>
+        <span class="n">c_prop</span> <span class="o">=</span> <span class="n">ConcentricProperties</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;concentric_properties&#39;</span><span class="p">])</span> \
+            <span class="k">if</span> <span class="s1">&#39;concentric_properties&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> \
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;concentric_properties&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">wire</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;identifier&#39;</span><span class="p">],</span> <span class="n">amp</span><span class="p">,</span> <span class="n">gmr</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">vl</span><span class="p">,</span> <span class="n">wt</span><span class="p">,</span> <span class="n">c_prop</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;display_name&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wire</span><span class="o">.</span><span class="n">display_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">wire</span></div>
+
+<div class="viewcode-block" id="Wire.from_electrical_database_dict"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.from_electrical_database_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_electrical_database_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a Wire from an dictionary as it appears in electrical_database.json.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of a Wire object in the format below.</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &#39;nameclass&#39;: &#39;OH AL 2/0 A&#39;,  # unique wire property identifier</span>
+<span class="sd">            &#39;ampacity (A)&#39;: 220,  # ampacity of the wire in amps</span>
+<span class="sd">            &#39;gmr (mm)&#39;: 3.9,  # gmr in meters</span>
+<span class="sd">            &#39;resistance (ohm/km)&#39;: 0.3937,  # resistance of the wire in ohms/km</span>
+<span class="sd">            &#39;diameter (mm)&#39;: 10,  # diameter of the wire in meters</span>
+<span class="sd">            &#39;voltage level&#39;: &#39;MV&#39;,</span>
+<span class="sd">            &#39;type&#39;: &#39;OH&#39;</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">c_prop</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;UG concentric neutral&#39;</span><span class="p">:</span>
+            <span class="n">c_prop</span> <span class="o">=</span> <span class="n">ConcentricProperties</span><span class="p">(</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gmr neutral (mm)&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;resistance neutral (ohm/km)&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;concentric diameter neutral strand (mm)&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;concentric neutral outside diameter (mm)&#39;</span><span class="p">],</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;# concentric neutral strands&#39;</span><span class="p">]</span>
+            <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;nameclass&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ampacity (A)&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gmr (mm)&#39;</span><span class="p">],</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;resistance (ohm/km)&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;diameter (mm)&#39;</span><span class="p">],</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;voltage level&#39;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">],</span> <span class="n">c_prop</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">identifier</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a text string for the unique object identifier.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_identifier</span>
+
+    <span class="nd">@identifier</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">identifier</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_identifier</span> <span class="o">=</span> <span class="n">valid_ep_string</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;wire identifier&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">display_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a string for the object name without any character restrictions.</span>
+
+<span class="sd">        If not set, this will be equal to the identifier.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_identifier</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span>
+
+    <span class="nd">@display_name</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">display_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">UnicodeEncodeError</span><span class="p">:</span>  <span class="c1"># Python 2 machine lacking the character set</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span> <span class="o">=</span> <span class="n">value</span>  <span class="c1"># keep it as unicode</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">ampacity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the ampacity of the wire in amps.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_ampacity</span>
+
+    <span class="nd">@ampacity</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">ampacity</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_ampacity</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;ampacity&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">geometrical_mean_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the geometrical mean radius of the wire in mm.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geometrical_mean_radius</span>
+
+    <span class="nd">@geometrical_mean_radius</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">geometrical_mean_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_geometrical_mean_radius</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">resistance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the resistance of the wire in ohms per km of wire.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resistance</span>
+
+    <span class="nd">@resistance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">resistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resistance</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;resistance&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the diameter of the wire in mm.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_diameter</span>
+
+    <span class="nd">@diameter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_diameter</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;diameter&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">voltage_level</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set text for the voltage level of the wire. (LV, MV, LV or MV).&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_voltage_level</span>
+
+    <span class="nd">@voltage_level</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">voltage_level</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">VALID_VOLTAGE_LEVELS</span><span class="p">,</span> <span class="s1">&#39;Voltage level &quot;</span><span class="si">{}</span><span class="s1">&quot; is not &#39;</span> \
+            <span class="s1">&#39;acceptable. Choose from:</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">VALID_PHASES</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_voltage_level</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">wire_type</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a text string for the type of wire.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_wire_type</span>
+
+    <span class="nd">@wire_type</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">wire_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">assert</span> <span class="n">value</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">VALID_WIRE_TYPES</span><span class="p">,</span> <span class="s1">&#39;Wire type &quot;</span><span class="si">{}</span><span class="s1">&quot; is not acceptable. &#39;</span> \
+            <span class="s1">&#39;Choose from:</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">VALID_WIRE_TYPES</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;UG concentric neutral&#39;</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="s1">&#39;Wire concentric_properties&#39;</span> \
+                <span class="s1">&#39; must be specified in order to use &quot;UG concentric neutral.&quot;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_wire_type</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">concentric_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set an array of Wire objects for the phases of the wires.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concentric_properties</span>
+
+    <span class="nd">@concentric_properties</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">concentric_properties</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">ConcentricProperties</span><span class="p">),</span> \
+                <span class="s1">&#39;Expected Wire ConcentricProperties. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_concentric_properties</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="Wire.to_dict"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Wire dictionary.&quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Wire&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;identifier&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="s1">&#39;ampacity&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ampacity</span><span class="p">,</span>
+            <span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span><span class="p">,</span>
+            <span class="s1">&#39;resistance&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span><span class="p">,</span>
+            <span class="s1">&#39;diameter&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span><span class="p">,</span>
+            <span class="s1">&#39;voltage_level&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">voltage_level</span><span class="p">,</span>
+            <span class="s1">&#39;wire_type&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">wire_type</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;concentric_properties&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="Wire.to_electrical_database_dict"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.to_electrical_database_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_electrical_database_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get Wire as it should appear in the URBANopt electrical database.json.&quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;nameclass&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="s1">&#39;ampacity (A)&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">ampacity</span><span class="p">,</span>
+            <span class="s1">&#39;gmr (mm)&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span><span class="p">,</span>
+            <span class="s1">&#39;resistance (ohm/km)&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span><span class="p">,</span>
+            <span class="s1">&#39;diameter (mm)&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span><span class="p">,</span>
+            <span class="s1">&#39;voltage level&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">voltage_level</span><span class="p">,</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">wire_type</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">c_prop</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;gmr neutral (mm)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c_prop</span><span class="o">.</span><span class="n">geometrical_mean_radius</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;resistance neutral (ohm/km)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c_prop</span><span class="o">.</span><span class="n">resistance</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;concentric diameter neutral strand (mm)&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="n">c_prop</span><span class="o">.</span><span class="n">concentric_strand_diameter</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;concentric neutral outside diameter (mm)&#39;</span><span class="p">]</span> <span class="o">=</span> \
+                <span class="n">c_prop</span><span class="o">.</span><span class="n">concentric_outside_diameter</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;# concentric neutral strands&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">c_prop</span><span class="o">.</span><span class="n">strand_count</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="Wire.lock"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.lock">[docs]</a>    <span class="k">def</span> <span class="nf">lock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The lock() method will also lock the concentric_properties.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Wire.unlock"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.unlock">[docs]</a>    <span class="k">def</span> <span class="nf">unlock</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;The unlock() method will also unlock the concentric_properties.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">concentric_properties</span><span class="o">.</span><span class="n">unlock</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Wire.duplicate"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a copy of this object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">new_obj</span> <span class="o">=</span> <span class="n">Wire</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ampacity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">voltage_level</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">wire_type</span><span class="p">)</span>
+        <span class="n">new_obj</span><span class="o">.</span><span class="n">_display_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span>
+        <span class="k">return</span> <span class="n">new_obj</span>
+
+    <span class="k">def</span> <span class="nf">__key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A tuple based on the object properties, useful for hashing.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ampacity</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">diameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">voltage_level</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">wire_type</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Wire</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Wire.ToString"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.Wire.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overwrite .NET ToString method.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent wire.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;Wire: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ConcentricProperties"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.ConcentricProperties">[docs]</a><span class="nd">@lockable</span>
+<span class="k">class</span> <span class="nc">ConcentricProperties</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents the concentric neutral properties of a wire in OpenDSS.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        geometrical_mean_radius: A number for the geometric mean of distances between</span>
+<span class="sd">            the neutral strands in millimeters. (Default: 0.8).</span>
+<span class="sd">        resistance: A number for the electrical resistance of the neutral strands in</span>
+<span class="sd">            ohms per kilometer of wire. (Default: 5.8).</span>
+<span class="sd">        concentric_strand_diameter: A number for the diameter of the neutral strand</span>
+<span class="sd">            in millimeters. (Default: 2).</span>
+<span class="sd">        concentric_outside_diameter:A number for the outside diameter of the neutral</span>
+<span class="sd">            strand in millimeters. (Default: 45).</span>
+<span class="sd">        strand_count: A positive integer for the number of concentric neutral</span>
+<span class="sd">            strands. (Default: 24)</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * geometrical_mean_radius</span>
+<span class="sd">        * resistance</span>
+<span class="sd">        * concentric_strand_diameter</span>
+<span class="sd">        * concentric_outside_diameter</span>
+<span class="sd">        * strand_count</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="s1">&#39;_locked&#39;</span><span class="p">,</span> <span class="s1">&#39;_geometrical_mean_radius&#39;</span><span class="p">,</span> <span class="s1">&#39;_resistance&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;_concentric_strand_diameter&#39;</span><span class="p">,</span> <span class="s1">&#39;_concentric_outside_diameter&#39;</span><span class="p">,</span> <span class="s1">&#39;_strand_count&#39;</span>
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">geometrical_mean_radius</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">resistance</span><span class="o">=</span><span class="mf">5.8</span><span class="p">,</span>
+            <span class="n">concentric_strand_diameter</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">concentric_outside_diameter</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
+            <span class="n">strand_count</span><span class="o">=</span><span class="mi">24</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize ConcentricProperties&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_locked</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># unlocked by default</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span> <span class="o">=</span> <span class="n">geometrical_mean_radius</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span> <span class="o">=</span> <span class="n">resistance</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">concentric_strand_diameter</span> <span class="o">=</span> <span class="n">concentric_strand_diameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">concentric_outside_diameter</span> <span class="o">=</span> <span class="n">concentric_outside_diameter</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">strand_count</span> <span class="o">=</span> <span class="n">strand_count</span>
+
+<div class="viewcode-block" id="ConcentricProperties.from_dict"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.ConcentricProperties.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a ConcentricProperties object from a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of a ConcentricProperties object</span>
+<span class="sd">                in the format below.</span>
+
+<span class="sd">        .. code-block:: python</span>
+
+<span class="sd">            {</span>
+<span class="sd">            &#39;type&#39;: &#39;ConcentricProperties&#39;,</span>
+<span class="sd">            &#39;geometrical_mean_radius&#39;: 0.8,  # gmr in mm</span>
+<span class="sd">            &#39;resistance&#39;: 5.8,  # resistance of the wire in ohms/km</span>
+<span class="sd">            &#39;concentric_strand_diameter&#39;: 2,  # diameter of the wire in mm</span>
+<span class="sd">            &#39;concentric_outside_diameter&#39;: 45,  # outside diameter of the wire in mm</span>
+<span class="sd">            &#39;strand_count&#39;: 24  # integer for the number of strands</span>
+<span class="sd">            }</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">gmr</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;geometrical_mean_radius&#39;</span> <span class="ow">in</span> <span class="n">data</span> \
+            <span class="k">else</span> <span class="mf">0.8</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;resistance&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;resistance&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mf">5.8</span>
+        <span class="n">s_dim</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;concentric_strand_diameter&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;concentric_strand_diameter&#39;</span> \
+            <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">2</span>
+        <span class="n">o_dim</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;concentric_outside_diameter&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;concentric_outside_diameter&#39;</span> \
+            <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">45</span>
+        <span class="n">sc</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;strand_count&#39;</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;strand_count&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">else</span> <span class="mi">24</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">gmr</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> <span class="n">s_dim</span><span class="p">,</span> <span class="n">o_dim</span><span class="p">,</span> <span class="n">sc</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">geometrical_mean_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the geometrical mean radius of the strands in mm.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geometrical_mean_radius</span>
+
+    <span class="nd">@geometrical_mean_radius</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">geometrical_mean_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_geometrical_mean_radius</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">resistance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the resistance of the strands in ohms per km of wire.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_resistance</span>
+
+    <span class="nd">@resistance</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">resistance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_resistance</span> <span class="o">=</span> <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;resistance&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">concentric_strand_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the diameter of the neutral strand in mm.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concentric_strand_diameter</span>
+
+    <span class="nd">@concentric_strand_diameter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">concentric_strand_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_concentric_strand_diameter</span> <span class="o">=</span> \
+            <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;concentric_strand_diameter&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">concentric_outside_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a number for the outside diameter of the neutral strand in mm.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_concentric_outside_diameter</span>
+
+    <span class="nd">@concentric_outside_diameter</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">concentric_outside_diameter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_concentric_outside_diameter</span> <span class="o">=</span> \
+            <span class="n">float_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;concentric_outside_diameter&#39;</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">strand_count</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get or set a positive integer for the number of concentric neutral strands.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_strand_count</span>
+
+    <span class="nd">@strand_count</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">strand_count</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_strand_count</span> <span class="o">=</span> <span class="n">int_positive</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;strand_count&#39;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ConcentricProperties.to_dict"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.ConcentricProperties.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get ConcentricProperties dictionary.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ConcentricProperties&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;geometrical_mean_radius&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span><span class="p">,</span>
+            <span class="s1">&#39;resistance&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span><span class="p">,</span>
+            <span class="s1">&#39;concentric_strand_diameter&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_strand_diameter</span><span class="p">,</span>
+            <span class="s1">&#39;concentric_outside_diameter&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_outside_diameter</span><span class="p">,</span>
+            <span class="s1">&#39;strand_count&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">strand_count</span>
+        <span class="p">}</span></div>
+
+<div class="viewcode-block" id="ConcentricProperties.duplicate"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.ConcentricProperties.duplicate">[docs]</a>    <span class="k">def</span> <span class="nf">duplicate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a copy of this object.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__copy__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">new_obj</span> <span class="o">=</span> <span class="n">ConcentricProperties</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">concentric_strand_diameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_outside_diameter</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">strand_count</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_obj</span>
+
+    <span class="k">def</span> <span class="nf">__key</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;A tuple based on the object properties, useful for hashing.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">geometrical_mean_radius</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">resistance</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">concentric_strand_diameter</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">concentric_outside_diameter</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">strand_count</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Wire</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">__key</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+<div class="viewcode-block" id="ConcentricProperties.ToString"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.wire.html#dragonfly_energy.opendss.wire.ConcentricProperties.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overwrite .NET ToString method.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent wire.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;ConcentricProperties: [</span><span class="si">{}</span><span class="s1"> strands]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">strand_count</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2023, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

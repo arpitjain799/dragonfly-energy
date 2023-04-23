@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dragonfly_energy.des.connector &#8212; dragonfly-energy  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          dragonfly-energy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate">dragonfly-energy translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-gbxml">model-to-gbxml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-idf">model-to-idf</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-osm">model-to-osm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/simulate.html">simulate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate">dragonfly-energy simulate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../dragonfly_energy.html">dragonfly_energy package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.cli.html">dragonfly_energy.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.simulate.html">dragonfly_energy.cli.simulate module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.translate.html">dragonfly_energy.cli.translate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#module-dragonfly_energy.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.des.html">dragonfly_energy.des package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.loop.html">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html">dragonfly_energy.opendss.lib package</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.powerlines.html">dragonfly_energy.opendss.lib.powerlines module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.transformers.html">dragonfly_energy.opendss.lib.transformers module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.wires.html">dragonfly_energy.opendss.lib.wires module</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#module-dragonfly_energy.opendss.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.wire.html">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.properties.html">dragonfly_energy.properties package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.building.html">dragonfly_energy.properties.building module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.context.html">dragonfly_energy.properties.context module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.model.html">dragonfly_energy.properties.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.room2d.html">dragonfly_energy.properties.room2d module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.story.html">dragonfly_energy.properties.story module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#module-dragonfly_energy.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.measure.html">dragonfly_energy.measure module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <h1>Source code for dragonfly_energy.des.connector</h1><div class="highlight"><pre>
+<span></span><span class="c1"># coding=utf-8</span>
+<span class="sd">&quot;&quot;&quot;Thermal connector in a District Energy System.&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
+
+<span class="kn">from</span> <span class="nn">.._base</span> <span class="kn">import</span> <span class="n">_GeometryBase</span>
+
+<span class="kn">from</span> <span class="nn">ladybug_geometry.geometry2d.line</span> <span class="kn">import</span> <span class="n">LineSegment2D</span>
+<span class="kn">from</span> <span class="nn">ladybug_geometry.geometry2d.polyline</span> <span class="kn">import</span> <span class="n">Polyline2D</span>
+<span class="kn">from</span> <span class="nn">dragonfly.projection</span> <span class="kn">import</span> <span class="n">polygon_to_lon_lat</span>
+
+
+<div class="viewcode-block" id="ThermalConnector"><a class="viewcode-back" href="../../../dragonfly_energy.des.connector.html#dragonfly_energy.des.connector.ThermalConnector">[docs]</a><span class="k">class</span> <span class="nc">ThermalConnector</span><span class="p">(</span><span class="n">_GeometryBase</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a thermal connector carrying hot, chilled or ambient water in a DES.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        identifier: Text string for a unique thermal connector ID. Must contain only</span>
+<span class="sd">            characters that are acceptable in a DES. This will be used to</span>
+<span class="sd">            identify the object across the exported geoJSON and DES files.</span>
+<span class="sd">        geometry: A LineSegment2D or Polyline2D representing the geometry of the</span>
+<span class="sd">            thermal connector.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * identifier</span>
+<span class="sd">        * display_name</span>
+<span class="sd">        * geometry</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">()</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">geometry</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize ThermalConnector.&quot;&quot;&quot;</span>
+        <span class="n">_GeometryBase</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">identifier</span><span class="p">)</span>  <span class="c1"># process the identifier</span>
+        <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">geometry</span><span class="p">,</span> <span class="p">(</span><span class="n">LineSegment2D</span><span class="p">,</span> <span class="n">Polyline2D</span><span class="p">)),</span> <span class="s1">&#39;Expected &#39;</span> \
+            <span class="s1">&#39;ladybug_geometry LineSegment2D or Polyline2D. Got </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">geometry</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span> <span class="o">=</span> <span class="n">geometry</span>
+
+<div class="viewcode-block" id="ThermalConnector.from_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.connector.html#dragonfly_energy.des.connector.ThermalConnector.from_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize an ThermalConnector from a dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A dictionary representation of an ThermalConnector object.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># check the type of dictionary</span>
+        <span class="k">assert</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ThermalConnector&#39;</span><span class="p">,</span> <span class="s1">&#39;Expected ThermalConnector &#39;</span> \
+            <span class="s1">&#39;dictionary. Got </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">])</span>
+        <span class="n">geo</span> <span class="o">=</span> <span class="n">LineSegment2D</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span> \
+            <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;LineSegment2D&#39;</span> \
+            <span class="k">else</span> <span class="n">Polyline2D</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">])</span>
+        <span class="n">con</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;identifier&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s1">&#39;display_name&#39;</span> <span class="ow">in</span> <span class="n">data</span> <span class="ow">and</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">con</span><span class="o">.</span><span class="n">display_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">con</span></div>
+
+<div class="viewcode-block" id="ThermalConnector.from_dict_abridged"><a class="viewcode-back" href="../../../dragonfly_energy.des.connector.html#dragonfly_energy.des.connector.ThermalConnector.from_dict_abridged">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_dict_abridged</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize an ThermalConnector from an abridged dictionary.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A ThermalConnector dictionary.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ThermalConnector.from_geojson_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.connector.html#dragonfly_energy.des.connector.ThermalConnector.from_geojson_dict">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">from_geojson_dict</span><span class="p">(</span>
+            <span class="bp">cls</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a ThermalConnector from a dictionary as it appears in a GeoJSON.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            data: A GeoJSON dictionary representation of an ThermalConnector feature.</span>
+<span class="sd">            origin_lon_lat: An array of two numbers in degrees. The first value</span>
+<span class="sd">                represents the longitude of the scene origin in degrees (between -180</span>
+<span class="sd">                and +180). The second value represents latitude of the scene origin</span>
+<span class="sd">                in degrees (between -90 and +90). Note that the &quot;scene origin&quot; is the</span>
+<span class="sd">                (0, 0) coordinate in the 2D space of the input polygon.</span>
+<span class="sd">            conversion_factors: A tuple with two values used to translate between</span>
+<span class="sd">                meters and longitude, latitude.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">geo</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">_geojson_coordinates_to_line2d</span><span class="p">(</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">][</span><span class="s1">&#39;coordinates&#39;</span><span class="p">],</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">],</span> <span class="n">geo</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">geometry</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a LineSegment2D or Polyline2D representing the thermal connector.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span>
+
+<div class="viewcode-block" id="ThermalConnector.reverse"><a class="viewcode-back" href="../../../dragonfly_energy.des.connector.html#dragonfly_energy.des.connector.ThermalConnector.reverse">[docs]</a>    <span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Reverse the direction of this object&#39;s geometry.</span>
+
+<span class="sd">        This is useful when trying to orient the connector to the direction</span>
+<span class="sd">        of flow within a larger loop.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span> \
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span><span class="p">,</span> <span class="n">LineSegment2D</span><span class="p">)</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">_geometry</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="ThermalConnector.to_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.connector.html#dragonfly_energy.des.connector.ThermalConnector.to_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;ThermalConnector dictionary representation.&quot;&quot;&quot;</span>
+        <span class="n">base</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ThermalConnector&#39;</span><span class="p">}</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;identifier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span>
+        <span class="n">base</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">base</span><span class="p">[</span><span class="s1">&#39;display_name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_name</span>
+        <span class="k">return</span> <span class="n">base</span></div>
+
+<div class="viewcode-block" id="ThermalConnector.to_geojson_dict"><a class="viewcode-back" href="../../../dragonfly_energy.des.connector.html#dragonfly_energy.des.connector.ThermalConnector.to_geojson_dict">[docs]</a>    <span class="k">def</span> <span class="nf">to_geojson_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_id</span><span class="p">,</span> <span class="n">end_id</span><span class="p">,</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">,</span>
+                        <span class="n">start_feature_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">end_feature_id</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get ThermalConnector dictionary as it appears in an URBANopt geoJSON.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            start_id: Identifier of the junction at the start of the pipe.</span>
+<span class="sd">            end_id: Identifier of the junction at the end of the pipe.</span>
+<span class="sd">            origin_lon_lat: An array of two numbers in degrees. The first value</span>
+<span class="sd">                represents the longitude of the scene origin in degrees (between -180</span>
+<span class="sd">                and +180). The second value represents latitude of the scene origin</span>
+<span class="sd">                in degrees (between -90 and +90). Note that the &quot;scene origin&quot; is the</span>
+<span class="sd">                (0, 0) coordinate in the 2D space of the input polygon.</span>
+<span class="sd">            conversion_factors: A tuple with two values used to translate between</span>
+<span class="sd">                meters and longitude, latitude.</span>
+<span class="sd">            start_feature_id: Optional identifier for a feature (Building or GHE field)</span>
+<span class="sd">                at the start of the pipe.</span>
+<span class="sd">            end_feature_id: Optional identifier for a feature (Building or GHE field)</span>
+<span class="sd">                at the end of the pipe.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># translate the geometry coordinates to latitude and longitude</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="p">,</span> <span class="n">LineSegment2D</span><span class="p">):</span>
+            <span class="n">pts</span> <span class="o">=</span> <span class="p">[(</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">p1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">p2</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># it&#39;s a polyline</span>
+            <span class="n">pts</span> <span class="o">=</span> <span class="p">[(</span><span class="n">pt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pt</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">pt</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">vertices</span><span class="p">]</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">polygon_to_lon_lat</span><span class="p">(</span><span class="n">pts</span><span class="p">,</span> <span class="n">origin_lon_lat</span><span class="p">,</span> <span class="n">conversion_factors</span><span class="p">)</span>
+        <span class="c1"># assign all of the properties to the connector</span>
+        <span class="n">conn_props</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;ThermalConnector&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">display_name</span><span class="p">,</span>
+            <span class="s1">&#39;startJunctionId&#39;</span><span class="p">:</span> <span class="n">start_id</span><span class="p">,</span>
+            <span class="s1">&#39;endJunctionId&#39;</span><span class="p">:</span> <span class="n">end_id</span><span class="p">,</span>
+            <span class="s1">&#39;total_length&#39;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">length</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="n">start_feature_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">conn_props</span><span class="p">[</span><span class="s1">&#39;startFeatureId&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">start_feature_id</span>
+        <span class="k">if</span> <span class="n">end_feature_id</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">conn_props</span><span class="p">[</span><span class="s1">&#39;endFeatureId&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">end_feature_id</span>
+        <span class="c1"># return the full dictionary</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Feature&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="n">conn_props</span><span class="p">,</span>
+            <span class="s1">&#39;geometry&#39;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;LineString&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;coordinates&#39;</span><span class="p">:</span> <span class="n">coords</span>
+            <span class="p">}</span>
+        <span class="p">}</span></div>
+
+    <span class="k">def</span> <span class="nf">__copy__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">new_con</span> <span class="o">=</span> <span class="n">ThermalConnector</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">geometry</span><span class="p">)</span>
+        <span class="n">new_con</span><span class="o">.</span><span class="n">_display_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_display_name</span>
+        <span class="k">return</span> <span class="n">new_con</span>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;ThermalConnector: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">display_name</span><span class="p">)</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2023, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

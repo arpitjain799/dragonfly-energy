@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dragonfly_energy.opendss.result &#8212; dragonfly-energy  documentation</title>
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../../index.html">
+          dragonfly-energy</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/translate.html">translate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate">dragonfly-energy translate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-gbxml">model-to-gbxml</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-idf">model-to-idf</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/translate.html#dragonfly-energy-translate-model-to-osm">model-to-osm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../cli/simulate.html">simulate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate">dragonfly-energy simulate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../cli/simulate.html#dragonfly-energy-simulate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../dragonfly_energy.html">dragonfly_energy package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.cli.html">dragonfly_energy.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.simulate.html">dragonfly_energy.cli.simulate module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.cli.translate.html">dragonfly_energy.cli.translate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.cli.html#module-dragonfly_energy.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.des.html">dragonfly_energy.des package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.connector.html">dragonfly_energy.des.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.ghe.html">dragonfly_energy.des.ghe module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.junction.html">dragonfly_energy.des.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.des.loop.html">dragonfly_energy.des.loop module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.des.html#module-dragonfly_energy.des">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.opendss.html">dragonfly_energy.opendss package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html">dragonfly_energy.opendss.lib package</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#submodules">Submodules</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.powerlines.html">dragonfly_energy.opendss.lib.powerlines module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.transformers.html">dragonfly_energy.opendss.lib.transformers module</a></li>
+<li class="toctree-l8"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.wires.html">dragonfly_energy.opendss.lib.wires module</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="../../../dragonfly_energy.opendss.lib.html#module-dragonfly_energy.opendss.lib">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.colorobj.html">dragonfly_energy.opendss.colorobj module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.connector.html">dragonfly_energy.opendss.connector module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.junction.html">dragonfly_energy.opendss.junction module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.network.html">dragonfly_energy.opendss.network module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.powerline.html">dragonfly_energy.opendss.powerline module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.result.html">dragonfly_energy.opendss.result module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.road.html">dragonfly_energy.opendss.road module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.substation.html">dragonfly_energy.opendss.substation module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformer.html">dragonfly_energy.opendss.transformer module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.transformerprop.html">dragonfly_energy.opendss.transformerprop module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.opendss.wire.html">dragonfly_energy.opendss.wire module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.opendss.html#module-dragonfly_energy.opendss">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.properties.html">dragonfly_energy.properties package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.building.html">dragonfly_energy.properties.building module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.context.html">dragonfly_energy.properties.context module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.model.html">dragonfly_energy.properties.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.room2d.html">dragonfly_energy.properties.room2d module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../../../dragonfly_energy.properties.story.html">dragonfly_energy.properties.story module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../dragonfly_energy.properties.html#module-dragonfly_energy.properties">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.config.html">dragonfly_energy.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.measure.html">dragonfly_energy.measure module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.reopt.html">dragonfly_energy.reopt module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.run.html">dragonfly_energy.run module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../dragonfly_energy.writer.html">dragonfly_energy.writer module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dragonfly_energy.html#module-dragonfly_energy">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../cli/index.html">CLI Docs</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">dragonfly_energy</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <h1>Source code for dragonfly_energy.opendss.result</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;Module for parsing OpenDSS results to data collections.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">from</span> <span class="nn">ladybug.datacollection</span> <span class="kn">import</span> <span class="n">HourlyContinuousCollection</span>
+<span class="kn">from</span> <span class="nn">ladybug.header</span> <span class="kn">import</span> <span class="n">Header</span>
+<span class="kn">from</span> <span class="nn">ladybug.analysisperiod</span> <span class="kn">import</span> <span class="n">AnalysisPeriod</span>
+<span class="kn">from</span> <span class="nn">ladybug.datatype.generic</span> <span class="kn">import</span> <span class="n">GenericType</span>
+<span class="kn">from</span> <span class="nn">ladybug.datatype.fraction</span> <span class="kn">import</span> <span class="n">Fraction</span>
+<span class="kn">from</span> <span class="nn">ladybug.futil</span> <span class="kn">import</span> <span class="n">csv_to_matrix</span>
+
+
+<div class="viewcode-block" id="OpenDSSResult"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.result.html#dragonfly_energy.opendss.result.OpenDSSResult">[docs]</a><span class="k">class</span> <span class="nc">OpenDSSResult</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Object for parsing OpenDSS CSV result files into Ladybug DataCollections.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_paths: A list of file paths to CSV files that were generated by OpenDSS.</span>
+
+<span class="sd">    Properties:</span>
+<span class="sd">        * file_paths</span>
+<span class="sd">        * factor_data</span>
+<span class="sd">        * condition_data</span>
+<span class="sd">        * peak_factors</span>
+<span class="sd">        * average_factors</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># data types for the various outputs from OpenDSS</span>
+    <span class="n">IS_OVERLOADED</span> <span class="o">=</span> <span class="n">GenericType</span><span class="p">(</span>
+        <span class="s1">&#39;Is Overloaded&#39;</span><span class="p">,</span> <span class="s1">&#39;condition&#39;</span><span class="p">,</span>
+        <span class="n">unit_descr</span><span class="o">=</span><span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Overloaded&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;Normal&#39;</span><span class="p">})</span>
+    <span class="n">VOLTAGE_CONDITION</span> <span class="o">=</span> <span class="n">GenericType</span><span class="p">(</span>
+        <span class="s1">&#39;Voltage Condition&#39;</span><span class="p">,</span> <span class="s1">&#39;condition&#39;</span><span class="p">,</span>
+        <span class="n">unit_descr</span><span class="o">=</span><span class="p">{</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Undervoltage&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;Normal&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="s1">&#39;Overvoltage&#39;</span><span class="p">})</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_paths</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize OpenDSSResult&quot;&quot;&quot;</span>
+        <span class="c1"># check the file paths</span>
+        <span class="k">for</span> <span class="n">fp</span> <span class="ow">in</span> <span class="n">file_paths</span><span class="p">:</span>
+            <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fp</span><span class="p">),</span> <span class="s1">&#39;No file was found at </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+            <span class="k">assert</span> <span class="n">fp</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">),</span> \
+                <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> is not an SQL file ending in .sql or .db.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_file_paths</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">file_paths</span><span class="p">)</span>
+
+        <span class="c1"># parse the csv data</span>
+        <span class="n">factors</span><span class="p">,</span> <span class="n">condition</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">result_file</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file_paths</span><span class="p">:</span>
+            <span class="c1"># parse the data and figure out the time series properties</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">csv_to_matrix</span><span class="p">(</span><span class="n">result_file</span><span class="p">)</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># remove the header from the CSV column</span>
+            <span class="n">a_period</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extract_analysis_period</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="c1"># figure out the type of object to write into the metadata</span>
+            <span class="n">obj_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">result_file</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">obj_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Line.&#39;</span><span class="p">):</span>
+                <span class="n">obj_name</span> <span class="o">=</span> <span class="n">obj_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Line.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                <span class="n">obj_type</span> <span class="o">=</span> <span class="s1">&#39;Electrical Connector Loading&#39;</span>
+            <span class="k">elif</span> <span class="n">obj_name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Transformer.&#39;</span><span class="p">):</span>
+                <span class="n">obj_name</span> <span class="o">=</span> <span class="n">obj_name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Transformer.&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+                <span class="n">obj_type</span> <span class="o">=</span> <span class="s1">&#39;Transformer Loading&#39;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">obj_type</span> <span class="o">=</span> <span class="s1">&#39;Building Voltage&#39;</span>
+            <span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="n">obj_type</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="n">obj_name</span><span class="p">}</span>
+
+            <span class="c1"># output the data collection of factors</span>
+            <span class="n">result_vals</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))]</span>
+            <span class="n">header</span> <span class="o">=</span> <span class="n">Header</span><span class="p">(</span><span class="n">Fraction</span><span class="p">(</span><span class="s1">&#39;Loading Factor&#39;</span><span class="p">),</span> <span class="s1">&#39;fraction&#39;</span><span class="p">,</span> <span class="n">a_period</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span>
+            <span class="n">factors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HourlyContinuousCollection</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">result_vals</span><span class="p">))</span>
+
+            <span class="c1"># output the data collection of conditions</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>  <span class="c1"># building voltage results</span>
+                <span class="n">cond_vals</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                    <span class="n">cond</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;False&#39;</span> <span class="k">else</span> <span class="mi">1</span>
+                    <span class="k">if</span> <span class="n">cond</span> <span class="o">!=</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;True</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+                        <span class="n">cond</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+                    <span class="n">cond_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                <span class="n">header</span> <span class="o">=</span> <span class="n">Header</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">VOLTAGE_CONDITION</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">VOLTAGE_CONDITION</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                    <span class="n">a_period</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span>
+                <span class="n">condition</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HourlyContinuousCollection</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">cond_vals</span><span class="p">))</span>
+            <span class="k">else</span><span class="p">:</span>  <span class="c1"># transformer or connector load</span>
+                <span class="n">cond_vals</span> <span class="o">=</span> <span class="p">[]</span>
+                <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+                    <span class="n">cond</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;False</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="k">else</span> <span class="mi">1</span>
+                    <span class="n">cond_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+                <span class="n">header</span> <span class="o">=</span> <span class="n">Header</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">IS_OVERLOADED</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">IS_OVERLOADED</span><span class="o">.</span><span class="n">units</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                    <span class="n">a_period</span><span class="p">,</span> <span class="n">metadata</span><span class="p">)</span>
+                <span class="n">condition</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">HourlyContinuousCollection</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">cond_vals</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_factor_data</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">factors</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_condition_data</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">file_paths</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a tuple of file paths to CSV files.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_file_paths</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">factor_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a tuple of loading factors associated with the input file paths.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_factor_data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">condition_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a tuple of conditions associated with the input file paths.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_condition_data</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">peak_factors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a list of numbers for the peak factors across the data.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">max</span> <span class="k">for</span> <span class="n">dat</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_factor_data</span><span class="p">]</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">average_factors</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a list of numbers for the average factors across the data.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">dat</span><span class="o">.</span><span class="n">average</span> <span class="k">for</span> <span class="n">dat</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_factor_data</span><span class="p">]</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_date_str_to_datetime</span><span class="p">(</span><span class="n">date_str</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a datetime object from a string.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="s1">&#39;%Y/%m/</span><span class="si">%d</span><span class="s1"> %H:%M:%S&#39;</span><span class="p">)</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_extract_analysis_period</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Extract an AnalysisPeriod from CSV data.&quot;&quot;&quot;</span>
+        <span class="n">dts</span> <span class="o">=</span> <span class="p">[</span><span class="n">OpenDSSResult</span><span class="o">.</span><span class="n">_date_str_to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)]</span>
+        <span class="n">timestep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">3600</span> <span class="o">/</span> <span class="p">(</span><span class="n">dts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">dts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">())</span>
+        <span class="n">leap_year</span> <span class="o">=</span> <span class="kc">True</span> <span class="k">if</span> <span class="n">dts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">year</span> <span class="o">%</span> <span class="mi">4</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="kc">False</span>
+        <span class="n">a_period</span> <span class="o">=</span> <span class="n">AnalysisPeriod</span><span class="p">(</span>
+            <span class="n">dts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">dts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">month</span><span class="p">,</span> <span class="n">dts</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">day</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span>
+            <span class="n">timestep</span><span class="o">=</span><span class="n">timestep</span><span class="p">,</span> <span class="n">is_leap_year</span><span class="o">=</span><span class="n">leap_year</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">a_period</span>
+
+<div class="viewcode-block" id="OpenDSSResult.ToString"><a class="viewcode-back" href="../../../dragonfly_energy.opendss.result.html#dragonfly_energy.opendss.result.OpenDSSResult.ToString">[docs]</a>    <span class="k">def</span> <span class="nf">ToString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Overwrite .NET ToString.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;OpenDSS Result [</span><span class="si">{}</span><span class="s1"> files]&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_paths</span><span class="p">))</span></div>
+</pre></div>
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2023, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
